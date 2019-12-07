@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.779
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultithreadConvertImage", "MultithreadConvertImage\MultithreadConvertImage.csproj", "{47067487-13B1-40EA-A4A7-02D89477F878}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47067487-13B1-40EA-A4A7-02D89477F878}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47067487-13B1-40EA-A4A7-02D89477F878}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47067487-13B1-40EA-A4A7-02D89477F878}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47067487-13B1-40EA-A4A7-02D89477F878}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {37161768-666E-427B-A4EF-92B464F94A33}
+	EndGlobalSection
+EndGlobal

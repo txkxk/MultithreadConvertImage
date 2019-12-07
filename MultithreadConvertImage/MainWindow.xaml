@@ -1,0 +1,63 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="本子压缩器" Height="450" Width="800">
+    <Grid>
+        <Button Content="浏览" HorizontalAlignment="Left" Margin="484,47,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button x:Name="btnStart" Content="Parallel" HorizontalAlignment="Left" Margin="669,230,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1" IsEnabled="False"/>
+        <Slider x:Name="qualitySilder" HorizontalAlignment="Left" Margin="281,108,0,0" VerticalAlignment="Top" Width="178" Height="23" ValueChanged="Slider_ValueChanged"/>
+        <TextBox x:Name="textQuality" HorizontalAlignment="Left" Height="23" Margin="79,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
+        <TextBox x:Name="pathText" Margin="79,47,345,342" IsReadOnly="True">
+            <TextBox.Resources>
+                <VisualBrush x:Key="HintText" TileMode="None" Opacity="0.5" Stretch="None" AlignmentX="Left">
+                    <VisualBrush.Visual>
+                        <TextBlock FontStyle="Italic" Text="请选择文件夹"/>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </TextBox.Resources>
+            <TextBox.Style>
+                <Style TargetType="TextBox">
+                    <Style.Triggers>
+                        <Trigger Property="Text" Value="{x:Null}">
+                            <Setter Property="Background" Value="{StaticResource HintText}"/>
+                        </Trigger>
+                        <Trigger Property="Text" Value="">
+                            <Setter Property="Background" Value="{StaticResource HintText}"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <TextBox x:Name="textMaxLine" Margin="79,169,593,219" Text="1920">
+            <TextBox.Resources>
+                <VisualBrush x:Key="HintText" TileMode="None" Opacity="0.5" Stretch="None" AlignmentX="Left">
+                    <VisualBrush.Visual>
+                        <TextBlock FontStyle="Italic" Text="长边最长长度"/>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </TextBox.Resources>
+            <TextBox.Style>
+                <Style TargetType="{x:Type TextBox}">
+                    <Style.Triggers>
+                        <Trigger Property="Text" Value="{x:Null}">
+                            <Setter Property="Background" Value="{StaticResource HintText}"/>
+                        </Trigger>
+                        <Trigger Property="Text" Value="">
+                            <Setter Property="Background" Value="{StaticResource HintText}"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <ProgressBar x:Name="progress" HorizontalAlignment="Left" Height="10" Margin="79,279,0,0" VerticalAlignment="Top" Width="622"/>
+        <Label Content="压缩质量" HorizontalAlignment="Left" Margin="107,131,0,0" VerticalAlignment="Top"/>
+        <Label Content="最长边长度" HorizontalAlignment="Left" Margin="101,200,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="textProgress" Content="当前进度：" HorizontalAlignment="Left" Margin="349,294,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnTask" Content="开始" HorizontalAlignment="Left" Margin="669,47,0,0" VerticalAlignment="Top" Width="75" Click="btnTask_Click"/>
+        <Button x:Name="btnInvoke" Content="Invoke" HorizontalAlignment="Left" Margin="669,186,0,0" VerticalAlignment="Top" Width="75" Click="BtnInvoke_Click" IsEnabled="False"/>
+    </Grid>
+</Window>
